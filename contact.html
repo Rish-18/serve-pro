@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact || Dental Care || Responsive HTML 5 Template</title>
+    <title>Contact || ServePro</title>
 
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,58 +31,64 @@
             font-family: Arial, sans-serif;
         }
 
-        .contact-info h2 {
-            text-align: center;
+        .contact-section .contact-title {
+            font-weight: bold;
+            font-size: 1.5rem;
             margin-bottom: 10px;
+            color: #0c0c31;
         }
 
-        .contact-info p {
-            text-align: center;
-            margin-bottom: 30px;
+        .contact-section .social-icons i {
+            font-size: 18px;
+            margin-right: 15px;
+            color: white;
+            background-color: #f7931e;
+            padding: 10px;
+            border-radius: 50%;
         }
 
-        .info-grid {
-            display: flex;
+        .contact-section .icon-circle {
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
             justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .info-item {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .info-item span {
-            font-size: 32px;
-            display: block;
+            align-items: center;
+            background-color: #ffe3c5;
+            border-radius: 50%;
             margin-bottom: 10px;
         }
 
-        .map-wrapper {
+        .contact-section .section-label {
+            font-weight: bold;
+            color: #0c0c31;
+        }
+
+        .contact-section .text-small {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-section .map-wrapper {
             margin-top: 20px;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
         }
 
-        .contact-form {
+        .contact-section .contact-form {
             border: 1px solid #ddd;
             padding: 30px;
-            border-radius: 10px;
-            margin-top: 40px;
+            /* border-radius: 10px; */
             background: #fff;
         }
 
-        .form-row {
+        .contact-section .form-row {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .form-group {
+        .contact-section .form-group {
             flex: 1;
             min-width: 250px;
             display: flex;
@@ -90,25 +96,25 @@
             margin-bottom: 20px;
         }
 
-        .form-group label {
+        .contact-section .form-group label {
             margin-bottom: 6px;
             font-weight: bold;
         }
 
-        .form-group input,
-        .form-group textarea {
+        .contact-section .form-group input,
+        .contact-section .form-group textarea {
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 14px;
         }
 
-        .form-group textarea {
+        .contact-section .form-group textarea {
             min-height: 100px;
             resize: vertical;
         }
 
-        button[type="submit"] {
+       .contact-section button[type="submit"] {
             background-color: #0b1957;
             color: #fff;
             padding: 14px 30px;
@@ -119,26 +125,29 @@
             margin-top: 10px;
         }
 
-        button[type="submit"]:hover {
+        .contact-section button[type="submit"]:hover {
             background-color: #091342;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .info-grid {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .form-row {
+            .contact-section .form-row {
                 flex-direction: column;
             }
 
-            .form-group {
+            .contact-section .form-group {
                 min-width: 100%;
             }
         }
+
+        .contact-section .row {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+    
     </style>
 </head>
 
@@ -209,38 +218,34 @@
                                     <ul class="navigation clearfix">
                                         <li><a href="index.html">Home</a></li>
                                         <li class="dropdown"><a href="about.html">About Us</a>
-                                            <ul>
+                                            <!-- <ul>
                                                 <li><a href="about.html">About Dentalcare</a></li>
                                                 <li><a href="team.html">Meet Our Dentist</a></li>
                                                 <li><a href="special-offers.html">Special Offers</a></li>
                                                 <li><a href="faq.html">FAQ’s</a></li>
                                                 <li><a href="testimonials.html">Testimonials</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li class="dropdown"><a href="services.html">Services</a>
-                                            <ul>
-                                                <li><a href="root-canel.html">Root Canel</a></li>
-                                                <li><a href="clips-braces.html">Clips & Braces</a></li>
-                                                <li><a href="dental-implant.html">Dental Implant</a></li>
-                                                <li><a href="teeth-whitening.html">Teeth Whitening</a></li>
-                                                <li><a href="tooth-jewellery.html">Tooth Jewellery</a></li>
-                                                <li><a href="teeth-filling.html">Teeth Filling</a></li>
+                                              <ul>
+                                                <li><a href="soft-services.html">Soft Services</a></li>
+                                                <li><a href="business-support-service.html">Business Support
+                                                        Services</a></li>
+                                                <li><a href="technical-service.html">Technical Services</a></li>
+                                                <li><a href="pest-control-service.html">Pest Control Services</a></li>
+                                                <li><a href="gardening-service.html">Gardening Services</a></li>
+                                                <li><a href="specialized-cleaning-service.html">Specialized Cleaning
+                                                        Services</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="appointment.html">Appointment</a></li>
+                                        <li><a href="contact.html">Appointment</a></li>
                                         <li class="dropdown"><a href="gallery.html">Gallery</a>
-                                            <ul>
+                                            <!-- <ul>
                                                 <li><a href="gallery.html">Gallery Before After</a></li>
                                                 <li><a href="gallery-grid.html">Gallery Grid View</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
-                                        <li class="dropdown"><a href="blog.html">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog Default</a></li>
-                                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                                <li><a href="blog-single.html">Blog Single Post</a></li>
-                                            </ul>
-                                        </li>
+                                  
                                         <li class="current"><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -342,37 +347,56 @@
         <!--End breadcrumb area-->
 
         <section class="contact-section">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <p>We’d love to hear from you whether you have questions, need support, or want to learn about our
-                    services — our team is here to help.</p>
-
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span>📞</span>
-                        <h4>Our Contact Info</h4>
-                        <p>+91 9876 5094<br>+91 8764 7214<br>serveproindia@gmail.com</p>
-                    </div>
-
-                    <div class="info-item">
-                        <span>📍</span>
-                        <h4>Our Address</h4>
-                        <p>Shop No. 1A<br>DLH Shopping Centre, MMR S Mega Corporate, Goregaon(East), Mumbai-400064.</p>
-                    </div>
-
-                    <div class="info-item">
-                        <span>⏰</span>
-                        <h4>Working Hours</h4>
-                        <p>Mon–Sat: 9:00 AM – 7:00 PM<br>Sunday: Closed</p>
+            <div class="row">
+                <!-- Left Column: Text + Social -->
+                <div class="col-md-4 mb-4">
+                    <div class="contact-title">Get in Touch</div>
+                    <p class="text-small">
+                        We’d love to hear from you whether you have questions, need support, or want
+                        to learn about our services — our team is here to help.
+                    </p>
+                    <div class="social-icons mt-3">
+                        <img src="./images/1servepro/contact/twt.png" alt="">
+                        <img src="./images/1servepro/contact/ind.png" alt="">
+                        <img src="./images/1servepro/contact/fb.png" alt="">
+                        <img src="./images/1servepro/contact/g+.png" alt="">
                     </div>
                 </div>
-                <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300"
-                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <!-- Middle Column: Contact Info -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-circle"><img src="./images/1servepro/contact/call.png" alt=""></div>
+                    <div class="section-label">Our Contact Info</div>
+                    <p class="text-small">+91 93 2650 5094</p>
+                    <p class="text-small">+91 96 1914 9374</p>
+                    <p class="text-small">serveprofacility@gmail.com</p>
+                </div>
+
+                <!-- Right Column: Address -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-circle"><img src="./images/1servepro/contact/loc.png" alt=""></div>
+                    <div class="section-label">Our Address</div>
+                    <p class="text-small">
+                        B-13, Ground Floor, Plot-1/4,<br>
+                        1, Civic Shopping Center, M.M.G.S. Marg,<br>
+                        Dastoorwadi, Dadar (East), Mumbai - <br> 400014.
+                    </p>
+                </div>
+                <div class="map-wrapper col-md-12">
+                    <!-- <iframe src="https://www.google.com/maps/" width="100%" height="300" style="border:0;"
+                        allowfullscreen="" loading="lazy"></iframe> -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15087.842094620919!2d72.83266059863254!3d19.021461114747837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cedb0ea0cd0f%3A0x428a465039995bd0!2sDadar%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1746422316366!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
-            <form class="contact-form">
+            <!-- Map -->
+           
+            <br><br>
+            <!-- Form -->
+            <form class="contact-form mt-5">
                 <div class="form-row">
                     <div class="form-group">
                         <label>First Name</label>
@@ -404,6 +428,7 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
+
 
 
 
@@ -510,7 +535,7 @@
         <!--end other services section -->
 
         <!--Start footer area-->
-        <footer class="footer-area">
+          <footer class="footer-area">
             <div class="container">
                 <div class="row">
                     <!--Start single footer widget-->
@@ -535,20 +560,41 @@
                     </div>
                     <!--End single footer widget-->
                     <!--Start single footer widget-->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget mar-lft mar-btm">
-                            <div class="title">
-                                <h3>Industry We Serve</h3>
-                                <span class="border"></span>
+                    <!-- for lap -->
+                    <div class="lap">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-footer-widget mar-lft mar-btm">
+                                <div class="title">
+                                    <h3>Industry We Serve</h3>
+                                    <span class="border"></span>
+                                </div>
+                                <ul class="quick-links">
+                                    <li><a href="#">Commercial</a></li>
+                                    <li><a href="#">Residential</a></li>
+                                    <li><a href="#">Customer Words</a></li>
+                                    <li><a href="#">Manufacturer</a></li>
+                                    <li><a href="#">Healthcare</a></li>
+                                    <li><a href="#">Data Center</a></li>
+                                </ul>
                             </div>
-                            <ul class="quick-links">
-                                <li><a href="#">Commercial</a></li>
-                                <li><a href="#">Residential</a></li>
-                                <li><a href="#">Customer Words</a></li>
-                                <li><a href="#">Manufacturer</a></li>
-                                <li><a href="#">Healthcare</a></li>
-                                <li><a href="#">Data Center</a></li>
-                            </ul>
+                        </div>
+                    </div>
+                    <!-- for mobile -->
+                    <div class="mob">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-footer-widget mar-lft mar-btm">
+                                <div class="title">
+                                    <h3>Quick Links</h3>
+                                    <span class="border"></span>
+                                </div>
+                                <ul class="quick-links">
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">About ServePro</a></li>
+                                    <li><a href="#">Customer Words</a></li>
+                                    <li><a href="#">Expert ServePro</a></li>
+                                    <li><a href="#">Make Appointment</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!--Start single footer widget-->
@@ -566,9 +612,9 @@
                                                 alt=""></span>
                                     </div>
                                     <div class="text-holder">
-                                        <h5>B-13, Ground Floor, Plot- 1/4,
-                                            Civic Shopping Center, M.M.G.S.
-                                            Marg, Dadar(East), Mumbai
+                                        <h5>B-13, Ground Floor, Plot- 1/4, <br>
+                                            Civic Shopping Center, M.M.G.S. <br>
+                                            Marg, Dadar(East), Mumbai <br>
                                             400014.</h5>
                                     </div>
                                 </li>
@@ -608,78 +654,84 @@
                                 <span class="border"></span>
                             </div>
                             <ul class="latest-work-list">
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-1.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <div class="inner-flex-footer">
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-1.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-2.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-2.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-3.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-3.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-4.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </li>
+                                </div>
+
+                                <div class="inner-flex-footer">
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-4.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-5.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-5.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="image-holder">
-                                        <img src="./images/1servepro/footer/img-6.png" alt="Awesome Image">
-                                        <div class="overlay-style-one">
-                                            <div class="box">
-                                                <div class="content">
-                                                    <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <div class="image-holder">
+                                            <img src="./images/1servepro/footer/img-6.png" alt="Awesome Image">
+                                            <div class="overlay-style-one">
+                                                <div class="box">
+                                                    <div class="content">
+                                                        <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </div>
+
                             </ul>
                         </div>
                     </div>
