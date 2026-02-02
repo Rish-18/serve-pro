@@ -497,12 +497,19 @@ select:focus {
     float: left;
     padding: 23px 20px;
     position: relative;
-    margin-left: 2px;
+    /* margin-left: 2px; */
 }
 
 .main-menu .navigation li:first-child {
     margin-left: 0;
     padding-left: 0;
+    /* padding: 5px 5px 5px 0; */
+}
+
+.main-menu .logo-item {
+    margin-left: 0;
+    padding-left: 0;
+    padding: 5px 5px 5px 0 !important;
 }
 
 .main-menu .navigation li::before {
@@ -632,6 +639,9 @@ select:focus {
 .main-menu .navigation > li > ul > li ul li a{ }
 .main-menu .navigation > li > ul > li  > ul > li:hover > a{}
 */
+
+/* new css for mobilev= view  */
+
 .main-menu .navbar-collapse>ul li.dropdown .dropdown-btn {
     position: absolute;
     right: 10px;
@@ -811,7 +821,7 @@ select:focus {
     position: relative;
     /* border-left: 1px solid #000000; */
     /* border-right: 1px solid #000000; */
-    padding: 27px 0;
+    padding: 20px 0;
     padding-right: 35px;
     padding-left: 35px;
 }
@@ -857,7 +867,6 @@ select:focus {
     line-height: 26px;
     font-family: "Poppins", sans-serif;
 }
-
 
 
 /*** 
@@ -4272,7 +4281,6 @@ select:focus {
     text-decoration: inherit;
     color: #ebf8ff;
     font-size: 24px;
-    padding-right: ;
     position: absolute;
     top: 0px;
     left: 30px;
@@ -5421,4 +5429,236 @@ select:focus {
 
 .sub-service-cards .service-points li:hover::before {
     color: #209fd6;
+}
+
+/*==============================================
+   industries section Css   
+*/
+
+.services-section {
+    /* background-color: #f9f9f9; */
+    padding: 50px 20px;
+    border-radius: 12px;
+    max-width: 1100px;
+    /* margin: 0 auto; */
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+}
+
+.section-header h1 {
+    text-align: left;
+    font-size: 28px;
+    /* margin-bottom: 10px; */
+    color: #222;
+    font-weight: 500;
+}
+
+.section-divider {
+    width: 70px;
+    height: 2px;
+    background: rgb(31, 51, 101);
+    display: inline-block;
+}
+
+.service-card img.service-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    /* color: #007BFF; */
+    font-weight: 600;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #007BFF;
+}
+
+.service-card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.service-card img.service-icon {
+    margin-bottom: 0;
+    /* override your original bottom margin */
+    flex-shrink: 0;
+}
+
+.service-text {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .service-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-card img.service-icon {
+        margin-bottom: 15px;
+        /* restore spacing below icon for mobile */
+    }
+
+    .service-text {
+        text-align: center;
+    }
+}
+
+
+
+/* ===============================
+   LEVEL 2 – RIGHT SIDE FLYOUT
+================================ */
+
+/* parent li */
+.main-menu .navigation li ul li.has-submenu {
+    position: relative;
+}
+
+
+/* right submenu (hidden by default) */
+.main-menu .navigation li ul li>ul.submenu-right {
+    position: absolute;
+    top: 0;
+    left: 109.5%;
+    width: 250px;
+    background: #f3fbff;
+    padding: 0 20px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 200;
+    transition: all 300ms ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    /* 🔥 THIS IS THE FIX */
+    transform: translateY(calc(-46.6px * var(--index)));
+}
+
+/* Each left menu item height = 54px */
+
+.main-menu .navigation li ul li:nth-child(1) {
+    --index: 0;
+}
+
+.main-menu .navigation li ul li:nth-child(2) {
+    --index: 1;
+}
+
+.main-menu .navigation li ul li:nth-child(3) {
+    --index: 2;
+}
+
+.main-menu .navigation li ul li:nth-child(4) {
+    --index: 3;
+}
+
+.main-menu .navigation li ul li:nth-child(5) {
+    --index: 4;
+}
+
+.main-menu .navigation li ul li:nth-child(6) {
+    --index: 5;
+}
+
+
+/* show submenu on hover */
+.main-menu .navigation li ul li.has-submenu:hover>ul.submenu-right {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* submenu items */
+.main-menu .navigation li ul li>ul.submenu-right li {
+    padding: 0;
+}
+
+.main-menu .navigation li ul li>ul.submenu-right li a {
+    padding: 12px 0;
+    font-size: 14px;
+    color: #1F3365;
+    border-bottom: 1px solid #e0edf4;
+}
+
+/* hover effect */
+.main-menu .navigation li ul li>ul.submenu-right li:hover>a {
+    background: #209fd6;
+    color: #fff;
+    padding-left: 18px;
+}
+
+
+/* ===== RIGHT SUBMENU FIX (CENTER ALIGN LIKE LEFT) ===== */
+.submenu-right {
+    padding: 0;
+}
+
+/* make each item SAME behavior as left column */
+.submenu-right>li {
+    width: 100%;
+}
+
+/* THIS IS THE KEY FIX */
+.submenu-right>li>a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* SAME spacing as left */
+    height: 54px;
+    line-height: 54px;
+    padding: 0 22px;
+
+    /* CENTER ALIGN EFFECT */
+    text-align: left;
+
+    margin: 0;
+    background-clip: padding-box;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover exactly like left */
+.submenu-right>li:hover>a,
+.submenu-right>li.active>a {
+    background-color: #2aa4d9;
+    color: #ffffff;
 }

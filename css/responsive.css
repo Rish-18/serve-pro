@@ -1004,6 +1004,10 @@
     .mainmenu-area .right .mobile-call-img {
         display: block;
         text-align: center;
+
+        img {
+            max-width: 80% ;
+        }
     }
 
 
@@ -1310,4 +1314,12 @@
         list-style: none;
     }
 
+}
+
+
+/* logo hide css in mob */
+@media (max-width: 763px) {
+    .logo-item {
+        display: none;
+    }
 }
